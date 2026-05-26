@@ -1,0 +1,43 @@
+{
+  "source": "tmdb",
+  "tmdb": {
+    "base_url": "https://api.themoviedb.org/3",
+    "language": "pt-BR",
+    "region": "BR",
+    "pages": 10,
+    "movie_source": "discover",
+    "discover_params": {
+      "primary_release_year": 2025,
+      "sort_by": "vote_average.desc",
+      "include_adult": false,
+      "include_video": false,
+      "vote_count.gte": 100
+    },
+    "timeout_seconds": 30,
+    "read_token_env": "TMDB_READ_TOKEN",
+    "api_key_env": "TMDB_API_KEY"
+  },
+  "charts": {
+    "line": {
+      "x": "release_month",
+      "y": "vote_average",
+      "title": "Nota media dos filmes mais bem avaliados de 2025 por mes",
+      "output": "output/tmdb_2025_avaliacao_linha.png",
+      "aggregation": "mean"
+    },
+    "bar": {
+      "x": "title",
+      "y": "vote_average",
+      "title": "Filmes mais bem avaliados de 2025",
+      "output": "output/tmdb_2025_avaliacao_barras.png",
+      "top_n": 15
+    },
+    "chord": {
+      "source": "original_language",
+      "target": "primary_genre",
+      "value": "vote_count",
+      "title": "Volume de avaliacoes por idioma e genero em 2025",
+      "output": "output/tmdb_2025_avaliacao_cordas.png"
+    }
+  }
+}

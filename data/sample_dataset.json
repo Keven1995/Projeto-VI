@@ -1,0 +1,14 @@
+{
+  "items": [
+    {"date": "2026-01-01", "category": "Energia", "source": "Norte", "target": "Sudeste", "value": 120},
+    {"date": "2026-01-02", "category": "Energia", "source": "Norte", "target": "Sul", "value": 80},
+    {"date": "2026-01-03", "category": "Transporte", "source": "Sudeste", "target": "Nordeste", "value": 95},
+    {"date": "2026-01-04", "category": "Transporte", "source": "Sul", "target": "Sudeste", "value": 70},
+    {"date": "2026-01-05", "category": "Saude", "source": "Nordeste", "target": "Norte", "value": 60},
+    {"date": "2026-01-06", "category": "Saude", "source": "Sudeste", "target": "Sul", "value": 110},
+    {"date": "2026-01-07", "category": "Educacao", "source": "Sul", "target": "Nordeste", "value": 50},
+    {"date": "2026-01-08", "category": "Educacao", "source": "Nordeste", "target": "Sudeste", "value": 75},
+    {"date": "2026-01-09", "category": "Energia", "source": "Norte", "target": "Sudeste", "value": 130},
+    {"date": "2026-01-10", "category": "Transporte", "source": "Sudeste", "target": "Norte", "value": 90}
+  ]
+}

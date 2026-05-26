@@ -1,0 +1,35 @@
+{
+  "source": "tmdb",
+  "tmdb": {
+    "base_url": "https://api.themoviedb.org/3",
+    "language": "pt-BR",
+    "region": "BR",
+    "pages": 3,
+    "timeout_seconds": 30,
+    "read_token_env": "TMDB_READ_TOKEN",
+    "api_key_env": "TMDB_API_KEY"
+  },
+  "charts": {
+    "line": {
+      "x": "release_date",
+      "y": "popularity",
+      "group_by": "primary_genre",
+      "title": "Popularidade dos filmes por data de lancamento",
+      "output": "output/tmdb_linha.png"
+    },
+    "bar": {
+      "x": "primary_genre",
+      "y": "popularity",
+      "title": "Popularidade acumulada por genero",
+      "output": "output/tmdb_barras.png",
+      "top_n": 10
+    },
+    "chord": {
+      "source": "original_language",
+      "target": "primary_genre",
+      "value": "popularity",
+      "title": "Relacao entre idioma original e genero principal",
+      "output": "output/tmdb_cordas.png"
+    }
+  }
+}

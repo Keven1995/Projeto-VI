@@ -1,0 +1,33 @@
+{
+  "local_data_path": "data/sample_dataset.json",
+  "records_path": "items",
+  "api": {
+    "url": "",
+    "timeout_seconds": 30,
+    "headers": {},
+    "params": {}
+  },
+  "charts": {
+    "line": {
+      "x": "date",
+      "y": "value",
+      "group_by": "source",
+      "title": "Evolucao por origem",
+      "output": "output/linha.png"
+    },
+    "bar": {
+      "x": "category",
+      "y": "value",
+      "title": "Volume por categoria",
+      "output": "output/barras.png",
+      "top_n": 10
+    },
+    "chord": {
+      "source": "source",
+      "target": "target",
+      "value": "value",
+      "title": "Fluxos entre origens e destinos",
+      "output": "output/cordas.png"
+    }
+  }
+}

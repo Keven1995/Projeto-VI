@@ -14,7 +14,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         "--config",
-        default="configs/local_sample_dataset.json",
+        default="configs/tmdb_top_rated_2025.json",
         help="Caminho do arquivo JSON de configuracao.",
     )
     return parser

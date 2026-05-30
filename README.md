@@ -45,7 +45,7 @@ TMDB_API_KEY=sua_api_key
 Gere os graficos finais:
 
 ```powershell
-python -m viz_api_project.cli --config configs\tmdb_top_rated_2025.json
+python -m viz_api_project
 ```
 
 Abra os arquivos gerados:
@@ -142,7 +142,7 @@ Se o token nao existir, usa `TMDB_API_KEY` como parametro `api_key`.
 ## Como gerar os graficos finais
 
 ```powershell
-python -m viz_api_project.cli --config configs\tmdb_top_rated_2025.json
+python -m viz_api_project
 ```
 
 Os arquivos serao gerados em `output`:

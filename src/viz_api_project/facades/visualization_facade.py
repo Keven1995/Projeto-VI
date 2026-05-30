@@ -33,7 +33,8 @@ class VisualizationFacade:
             raise ValueError("Configuracao do TMDB ausente.")
 
         repository = TmdbMovieRepository(TmdbClient(config.tmdb))
-        return MovieDatasetService(repository).build_dataset()
+        release_year = _extract_release_year(config.tmdb.discover_params)
+        return MovieDatasetService(repository, release_year=release_year).build_dataset()
 
     def _build_visualization_service(
         self,
@@ -46,3 +47,19 @@ class VisualizationFacade:
                 ChordChartStrategy(config.chord),
             ]
         )
+
+
+def _extract_release_year(
+    discover_params: dict[str, str | int | float | bool] | None,
+) -> int | None:
+    if not discover_params:
+        return None
+
+    release_year = discover_params.get("primary_release_year")
+    if isinstance(release_year, int):
+        return release_year
+
+    if isinstance(release_year, str) and release_year.isdigit():
+        return int(release_year)
+
+    return None

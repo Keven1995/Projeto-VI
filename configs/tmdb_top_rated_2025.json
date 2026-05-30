@@ -8,6 +8,8 @@
     "movie_source": "discover",
     "discover_params": {
       "primary_release_year": 2025,
+      "primary_release_date.gte": "2025-01-01",
+      "primary_release_date.lte": "2025-12-31",
       "sort_by": "vote_average.desc",
       "include_adult": false,
       "include_video": false,
@@ -37,7 +39,8 @@
       "target": "primary_genre",
       "value": "vote_count",
       "title": "Volume de avaliacoes por idioma e genero em 2025",
-      "output": "output/tmdb_2025_avaliacao_cordas.png"
+      "output": "output/tmdb_2025_avaliacao_cordas.png",
+      "top_n": 20
     }
   }
 }

@@ -77,6 +77,8 @@ Filtros principais em `configs/tmdb_top_rated_2025.json`:
 ```json
 {
   "primary_release_year": 2025,
+  "primary_release_date.gte": "2025-01-01",
+  "primary_release_date.lte": "2025-12-31",
   "sort_by": "vote_average.desc",
   "vote_count.gte": 100
 }
@@ -201,11 +203,12 @@ Config atual:
 {
   "source": "original_language",
   "target": "primary_genre",
-  "value": "vote_count"
+  "value": "vote_count",
+  "top_n": 20
 }
 ```
 
-Esse grafico relaciona idioma original e genero principal. A espessura das conexoes representa o volume de votos (`vote_count`).
+Esse grafico relaciona idioma original e genero principal. A espessura das conexoes representa o volume de votos (`vote_count`). Para manter a leitura clara, sao exibidas as 20 conexoes mais relevantes.
 
 ## Fluxo de execucao
 

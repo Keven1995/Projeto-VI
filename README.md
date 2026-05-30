@@ -62,6 +62,24 @@ Se a pessoa nao tiver credencial do TMDB, ainda pode testar o funcionamento com 
 python -m viz_api_project.cli --config configs\local_sample_dataset.json
 ```
 
+## Arquivo unico para entrega
+
+Como a entrega pede um unico arquivo com o codigo, tambem existe uma versao em notebook:
+
+```text
+projeto_visualizacao_tmdb.ipynb
+```
+
+Esse notebook e autocontido: ele faz o consumo da API do TMDB, transforma o dataset e gera os tres graficos sem depender dos modulos internos da pasta `src`.
+
+Para executar:
+
+```powershell
+jupyter notebook projeto_visualizacao_tmdb.ipynb
+```
+
+Depois, execute as celulas em ordem. O notebook usa o mesmo arquivo `.env` com `TMDB_READ_TOKEN` ou `TMDB_API_KEY`.
+
 ## Tema do dataset
 
 O dataset é consumido dinamicamente da API do TMDB usando o endpoint `discover/movie`.
